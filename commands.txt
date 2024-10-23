@@ -1,0 +1,20 @@
+mosquitto_sub -h localhost -t 'zigbee2mqtt/#'
+
+ls /dev/tty*
+/dev/tty.usbserial-1430
+
+Sonoff Zigbee 3.0 USB Dongle Plus V2
+
+Raspberry Pi:
+/dev/ttyUSB0
+
+ls -l /dev/serial/by-id
+total 0
+lrwxrwxrwx 1 root root 13 Oct 22 13:55 usb-Itead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_V2_0e9918cfc212ef1180c66fb8bf9df066-if00-port0 -> ../../ttyUSB0
+
+
+test -w [PORT] && echo success || echo failure
+test -w /dev/ttyUSB0 && echo success || echo failure
+
+npm start
+
